@@ -106,4 +106,3 @@ print(f"Greatest increase: {date_of_increase} ({greatest_increase})")
 print(f"Greatest decrease: {date_of_decrease} ({greatest_decrease})")
 
 # Exporting my results as a .txt file to the Analysis folder
-
