@@ -2,7 +2,7 @@ import os
 import csv
 
 # Path to show where to collect information from
-budget_data_csv = os.path.join("Starter_Code" , "PyBank" , "Resources" , "budget_data.csv")
+budget_data_csv = os.path.join(".." , "PyBank" , "Resources" , "budget_data.csv")
 # Setting the variables
 total_months = 0
 
