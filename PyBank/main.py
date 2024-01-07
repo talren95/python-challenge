@@ -14,7 +14,7 @@ with open(budget_data_csv) as csv_file:
     #Reading/Skipping the header row
     header = next(csv_reader, None)
 
-    # Reading the first row (there is no header)
+    # Reading the first row after the header
     for row in csv_reader:
 
         total_months += 1
@@ -104,3 +104,6 @@ date_of_decrease = dates[changes.index(greatest_decrease)] if greatest_decrease 
 # Display the results
 print(f"Greatest increase: {date_of_increase} ({greatest_increase})")
 print(f"Greatest decrease: {date_of_decrease} ({greatest_decrease})")
+
+# Exporting my results as a .txt file to the Analysis folder
+
