@@ -2,7 +2,7 @@ import os
 import csv
 
 # Path to show where to collect information from
-election_data_csv = os.path.join(".." , "PyPoll" , "Resources" , "election_data.csv")
+election_data_csv = os.path.join("Resources" , "election_data.csv")
 # Setting the variables
 total_votes = 0
 candidate_votes = {}
@@ -38,3 +38,20 @@ for candidate, votes in candidate_votes.items():
     print(f"{candidate} {percentage: .2f}% ({votes})")
 print("---------------------------------------------")
 print (f"Winner: {winner}")
+
+# Creating a .txt file with the results
+
+f = open("Analysis\election_data_analysis.txt", "w")
+f.write(f"Total Votes: {total_votes}")
+f.write("\n")
+f.write("---------------------------------------------")
+f.write("\n")
+for candidate, votes in candidate_votes.items():
+    percentage = (votes / total_votes) * 100
+    f.write(f"{candidate} {percentage: .2f}% ({votes})")
+f.write("\n")
+f.write("---------------------------------------------")
+f.write("\n")
+f.write(f"Winner: {winner}")
+f.close()
+

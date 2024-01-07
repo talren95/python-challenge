@@ -2,7 +2,7 @@ import os
 import csv
 
 # Path to show where to collect information from
-budget_data_csv = os.path.join(".." , "PyBank" , "Resources" , "budget_data.csv")
+budget_data_csv = os.path.join("Resources" , "budget_data.csv")
 # Setting the variables
 total_months = 0
 
@@ -106,3 +106,16 @@ print(f"Greatest increase: {date_of_increase} ({greatest_increase})")
 print(f"Greatest decrease: {date_of_decrease} ({greatest_decrease})")
 
 # Exporting my results as a .txt file to the Analysis folder
+# Creating a .txt file with the results
+
+f = open("Analysis\election_data_analysis.txt", "w")
+f.write(f"Total months: {total_months}")
+f.write("\n")
+f.write(f"Total: {net_total}")
+f.write("\n")
+f.write(f"Average change: {average_change}")
+f.write("\n")
+f.write(f"Greatest increase: {date_of_increase} ({greatest_increase})")
+f.write("\n")
+f.write(f"Greatest decrease: {date_of_decrease} ({greatest_decrease})")
+f.close()
