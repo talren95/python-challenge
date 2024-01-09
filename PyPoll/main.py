@@ -2,7 +2,7 @@ import os
 import csv
 
 # Path to show where to collect information from
-election_data_csv = os.path.join("Resources" , "election_data.csv")
+election_data_csv = os.path.join("PyPoll", "Resources" , "election_data.csv")
 # Setting the variables
 total_votes = 0
 candidate_votes = {}
@@ -41,7 +41,7 @@ print (f"Winner: {winner}")
 
 # Creating a .txt file with the results
 
-f = open("Analysis\election_data_analysis.txt", "w")
+f = open("PyPoll\Analysis\election_data_analysis.txt", "w")
 f.write(f"Total Votes: {total_votes}")
 f.write("\n")
 f.write("---------------------------------------------")
