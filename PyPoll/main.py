@@ -48,7 +48,7 @@ f.write("---------------------------------------------")
 f.write("\n")
 for candidate, votes in candidate_votes.items():
     percentage = (votes / total_votes) * 100
-    f.write(f"{candidate} {percentage: .2f}% ({votes})")
+    f.write(f"{candidate} {percentage: .2f}% ({votes}) {"\n"}")
 f.write("\n")
 f.write("---------------------------------------------")
 f.write("\n")
